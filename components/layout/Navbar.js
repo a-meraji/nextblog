@@ -63,7 +63,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="/blog">
+            <Link href="/">
               <a className="link">blog</a>
             </Link>
           </li>
