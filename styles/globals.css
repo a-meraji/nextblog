@@ -1,3 +1,82 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&family=Roboto:wght@300;400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.dark {
+  --color-bg-primary: #012224;
+
+  --color-text-primary: #aac0c1;
+  --color-text-secondary: #446163;
+
+  --color-accent: #60f2f2;
+  --color-trans-accent: RGB(29, 170, 170, 0.1);
+  --color-text-on-accent: #3f6260; /* 344456 */
+  --color-text-on-accent-trans: #3f6260;
+}
+
+.light {
+  --color-bg-primary: #efefef;
+
+  --color-text-primary: #344456;
+  --color-text-secondary: #7f95ae;
+
+  --color-accent: #5cbbbb;
+  --color-accent-hover: #17fdfd;
+  --color-trans-accent: RGB(29, 170, 170, 0.1);
+  --color-text-on-accent: #fff;
+  --color-text-on-accent-trans: #ddd0d0;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  /* font-family: "Rubik", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+  scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Raleway', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.raleway {
+  font-family: 'Raleway', sans-serif;
+}
+
+.font-pop {
+  font-family: 'Poppins', sans-serif;
+}
+
+.layout-m {
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+.layout-p {
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.post img {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto 0;
+}
+
+a {
+  cursor: pointer !important;
+}
