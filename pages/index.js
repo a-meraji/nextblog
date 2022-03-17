@@ -39,9 +39,6 @@ export default function Home() {
           </ScrollPage>
 
           <article id="my-works" className="layout-p">
-            <h1 className="mt-20 mb-5 text-center text-4xl font-semibold">
-              Some of my latest works
-            </h1>
             {projects.map((project, index) => (
               <ProjectPresent
                 key={`${project.title}${index}`}
@@ -52,7 +49,6 @@ export default function Home() {
           </article>
 
           <div id="message" className="layout-p">
-            <h1 className="mt-32 text-center text-4xl">Wanna talk?</h1>
             <Message />
           </div>
         </ScrollContainer>

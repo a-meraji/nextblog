@@ -7,7 +7,7 @@ export default function FirstIntro() {
   const [isClicked, setIsClicked] = useState(false)
   return (
     <section className="relative flex h-screen flex-col items-center xl:flex-row">
-      <div className="my-auto pl-5">
+      <div className="my-auto px-5">
         <div className="flex w-full items-center justify-start gap-x-3">
           <motion.div
             initial={{ zIndex: -100, opacity: 0, x: -100 }}
