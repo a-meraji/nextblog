@@ -48,17 +48,17 @@ export default function Navbar() {
       <div>
         <ul className="flex justify-end gap-4">
           <li className='hidden md:block'>
-            <Link href="/#about">
+            <Link href="#about">
               <a className="link">about</a>
             </Link>
           </li>
           <li className='hidden md:block'>
-            <Link href="/#my-works">
+            <Link href="#my-works">
               <a className="link">my works</a>
             </Link>
           </li>
           <li className='hidden md:block'>
-            <Link href="/#message">
+            <Link href="#message">
               <a className="link">message</a>
             </Link>
           </li>

@@ -20,10 +20,11 @@ export default function Home() {
   if (typeof window !== 'undefined') {
     return (
       <main className="font-pop  bg-primary text-primary">
+        <div id="about"></div>
         <ScrollContainer>
           <ScrollPage page={0}>
             <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
-              <article id="about" className="layout-p relative w-screen">
+              <article className="layout-p relative w-screen">
                 <FirstIntro />
               </article>
             </Animator>
@@ -50,7 +51,7 @@ export default function Home() {
             ))}
           </article>
 
-          <div className="layout-p">
+          <div id="message" className="layout-p">
             <h1 className="mt-32 text-center text-4xl">Wanna talk?</h1>
             <Message />
           </div>

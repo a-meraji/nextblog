@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form'
 import { IoSend } from 'react-icons/io5'
 import { BiLoader, BiCheck } from 'react-icons/bi'
-import {MdOutlineSmsFailed} from 'react-icons/md'
+import { MdOutlineSmsFailed } from 'react-icons/md'
 import { useState } from 'react'
 
 export default function Message() {
@@ -39,7 +39,6 @@ export default function Message() {
   return (
     <section className="flex h-screen items-center justify-center">
       <form
-        id="message"
         onSubmit={handleSubmit(onSubmit)}
         className="m-auto w-full max-w-xl px-4"
       >
@@ -73,7 +72,13 @@ export default function Message() {
         {errors.userMessage && <p>Don't be shy! Say something.</p>}
         <button
           type="submit"
-          className={`transition-all group relative flex items-center justify-between gap-x-1 rounded-full bg-accent py-2 ${isSent===0?"px-4":isSent===200?"px-10":"px-16 bg-red-600"} text-onAccent focus:outline-none`}
+          className={`group relative flex items-center justify-between gap-x-1 rounded-full bg-accent py-2 text-onAccent transition-all ${
+            isSent === 0
+              ? 'px-4'
+              : isSent === 200
+              ? 'px-10'
+              : 'bg-red-600 px-16 text-white'
+          } focus:outline-none`}
         >
           {/* default */}
           <span
@@ -109,9 +114,12 @@ export default function Message() {
                 <BiCheck />
               </>
             )}
-            {isSent === 500 && (<>
-              <span className='mr-2' >not sent try again</span>
-            <MdOutlineSmsFailed className='scale-150'/></>)}
+            {isSent === 500 && (
+              <>
+                <span className="mr-2">not sent try again</span>
+                <MdOutlineSmsFailed className="scale-150" />
+              </>
+            )}
           </span>
         </button>
       </form>
