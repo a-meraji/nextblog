@@ -62,9 +62,9 @@ export default function FirstIntro() {
                 setIsClicked(false)
               },1500)
             }}
-            className="group relative flex items-center justify-between gap-x-1 rounded-full bg-accent py-2 px-4 text-onAccent"
+            className="group relative flex items-center justify-between gap-x-1 rounded-full bg-accent py-2 px-4 text-onAccent focus:outline-none"
           >
-            <span className={`transition-all ${isClicked&&"-translate-x-[200%]"} group-hover:-translate-x-[200%]`}>
+            <span className={`transition-all ${isClicked&&"-translate-x-[200%] opacity-0"} group-hover:-translate-x-[200%] group-hover:opacity-0`}>
               copy my e-mail
             </span>
 

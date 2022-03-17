@@ -73,7 +73,7 @@ export default function Message() {
         {errors.userMessage && <p>Don't be shy! Say something.</p>}
         <button
           type="submit"
-          className={`transition-all group relative flex items-center justify-between gap-x-1 rounded-full bg-accent py-2 ${isSent===0?"px-4":isSent===200?"px-10":"px-16 bg-red-600"} text-onAccent`}
+          className={`transition-all group relative flex items-center justify-between gap-x-1 rounded-full bg-accent py-2 ${isSent===0?"px-4":isSent===200?"px-10":"px-16 bg-red-600"} text-onAccent focus:outline-none`}
         >
           {/* default */}
           <span

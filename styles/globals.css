@@ -14,8 +14,8 @@
 
   --color-accent: #60f2f2;
   --color-trans-accent: RGB(29, 170, 170, 0.1);
-  --color-text-on-accent: #3f6260; /* 344456 */
-  --color-text-on-accent-trans: #3f6260;
+  --color-text-on-accent: #08474a;
+  --color-text-on-accent-trans: #08474a;
 }
 
 .light {
@@ -79,4 +79,8 @@ h6 {
 
 a {
   cursor: pointer !important;
+}
+
+accent-buttun{
+  
 }

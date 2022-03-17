@@ -8,7 +8,7 @@ export default function SideSocials() {
         {socials.map((social, index) => (
           <li key={`${social.name}${index}`}>
             <Link href={social.url}>
-              <a>
+              <a target="_blank">
                 <social.icon className="h-6 w-6" />
               </a>
             </Link>
