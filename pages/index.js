@@ -17,10 +17,9 @@ import {
 } from 'react-scroll-motion'
 
 export default function Home() {
-  return (
-    <main className="font-pop  bg-primary text-primary">
-      {/* <div className="h-screen w-full bg-green-600"></div> */}
-      {typeof window !== 'undefined' ? (
+  if (typeof window !== 'undefined') {
+    return (
+      <main className="font-pop  bg-primary text-primary">
         <ScrollContainer>
           <ScrollPage page={0}>
             <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
@@ -31,13 +30,7 @@ export default function Home() {
           </ScrollPage>
 
           <ScrollPage page={1}>
-            <Animator
-              animation={batch(
-                FadeIn(),
-                ZoomIn(),
-                MoveOut(0, -200)
-              )}
-            >
+            <Animator animation={batch(FadeIn(), ZoomIn(), MoveOut(0, -200))}>
               <article id="skills">
                 <SecondIntro />
               </article>
@@ -45,7 +38,7 @@ export default function Home() {
           </ScrollPage>
 
           <article id="my-works" className="layout-p">
-            <h1 className="text-center text-4xl font-semibold mt-20 mb-5">
+            <h1 className="mt-20 mb-5 text-center text-4xl font-semibold">
               Some of my latest works
             </h1>
             {projects.map((project, index) => (
@@ -58,29 +51,35 @@ export default function Home() {
           </article>
 
           <div className="layout-p">
-          <h1 className='text-4xl mt-32 text-center'>Wanna talk?</h1>
+            <h1 className="mt-32 text-center text-4xl">Wanna talk?</h1>
             <Message />
           </div>
         </ScrollContainer>
-      ) : (
-        <>
-          <article id="about">
-            <FirstIntro />
-          </article>
-          <article id="skills">
-            <SecondIntro />
-          </article>
-          <article id="my-works">
-            {projects.map((project, index) => (
-              <ProjectPresent
-                key={`${project.title}${index}`}
-                project={project}
-              />
-            ))}
-          </article>
-          <Message />
-        </>
-      )}
+      </main>
+    )
+  }
+
+  return (
+    <main className="font-pop  bg-primary text-primary">
+      {/* <div className="h-screen w-full bg-green-600"></div> */}
+      <>
+        <article id="about">
+          <FirstIntro />
+        </article>
+        <article id="skills">
+          <SecondIntro />
+        </article>
+        <article id="my-works">
+          {projects.map((project, index) => (
+            <ProjectPresent
+              key={`${project.title}${index}`}
+              project={project}
+            />
+          ))}
+        </article>
+        <Message />
+      </>
+      )
     </main>
   )
 }
