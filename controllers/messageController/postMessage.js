@@ -10,7 +10,7 @@ export default function postMessage(req, res) {
 
   const transporter = nodemailer.createTransport({
     port: 465,
-    host: "smtp.gmail.com",
+    host: "aminblog.vercel.app",
     auth: {
       user: process.env.EMAIL,
       pass:  process.env.EMAIL_PASSWORD,
