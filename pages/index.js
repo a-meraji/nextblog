@@ -21,7 +21,7 @@ import {
 export default function Home() {
   if (typeof window !== 'undefined') {
     return (
-      <main className="font-pop  bg-primary text-primary">
+      <main className="font-pop transition-colors duration-700  bg-primary text-primary">
         <div id="about"></div>
         <ScrollContainer id="scrollContainer" style={{zIndex:-100}}>
           <ScrollPage page={0}>
