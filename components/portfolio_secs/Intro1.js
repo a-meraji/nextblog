@@ -35,10 +35,10 @@ export default function FirstIntro() {
               opacity: { ease: 'easeOut', duration: 1 },
               x: { ease: 'easeOut', duration: 1 },
             }}
-            classame="w-full text-secondary"
+            classame="w-full"
           >
-            <h6 className="text-sm text-secondary">I'm Amin Meraji</h6>
-            <p className="text-xs text-secondary">available for work</p>
+            <h6 className="text-sm -mr-5 bg-red-600 text-secondary">I'm Amin Meraji</h6>
+            <p className="text-xs -mr-5 text-secondary">available for work</p>
           </motion.div>
         </div>
         <motion.div
