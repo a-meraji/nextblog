@@ -6,9 +6,9 @@ import SideSocials from './Sidebar'
 export default function Layout({ children }) {
   return (
     <>
+      {children}
       <Navbar />
       <SideSocials/>
-      {children}
       <FootNav/>
     </>
   )

@@ -13,6 +13,8 @@ import {
   FadeIn,
   MoveOut,
   Sticky,
+  StickyIn,
+  StickyOut,
   ZoomIn,
 } from 'react-scroll-motion'
 
@@ -21,9 +23,9 @@ export default function Home() {
     return (
       <main className="font-pop  bg-primary text-primary">
         <div id="about"></div>
-        <ScrollContainer>
+        <ScrollContainer id="scrollContainer" style={{zIndex:-100}}>
           <ScrollPage page={0}>
-            <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
+            <Animator animation={batch(Fade(), Sticky())}>
               <article className="layout-p relative w-screen">
                 <FirstIntro />
               </article>
@@ -31,7 +33,7 @@ export default function Home() {
           </ScrollPage>
 
           <ScrollPage page={1}>
-            <Animator animation={batch(FadeIn(), ZoomIn(), MoveOut(0, -200))}>
+            <Animator animation={batch(FadeIn() ,ZoomIn())}>
               <article id="skills">
                 <SecondIntro />
               </article>
