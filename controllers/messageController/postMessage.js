@@ -21,7 +21,7 @@ export default function postMessage(req, res) {
   const mailData = {
     from: process.env.EMAIL,
     to: process.env.DEST_EMAIL,
-    subject: `Message From ${userName}`,
+    subject: `Message From ${userName}.t`,
     text: userMessage + " | Sent from: " + userEmail,
     html: `<div>${userMessage}</div><p>Sent from:
     ${userEmail}</p>`
