@@ -49,7 +49,7 @@ export default function Home() {
             ))}
           </article>
 
-          <div id="message" className="layout-p">
+          <div id="message" className="layout-p pb-[50vh]">
             <Message />
           </div>
         </ScrollContainer>
