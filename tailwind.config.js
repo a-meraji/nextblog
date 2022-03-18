@@ -17,6 +17,7 @@ module.exports = {
         accent: 'var(--color-accent)',
         onAccent: 'var(--color-text-on-accent)',
         onAccentTr: 'var(--color-text-on-accent-trans)',
+        txtAccent:'var(--color-text-accent)',
       },
       borderColor: {
         primary: 'var(--color-text-primary)',

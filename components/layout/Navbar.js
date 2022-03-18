@@ -8,40 +8,6 @@ import  {BsFillSunFill,BsFillMoonFill} from 'react-icons/bs'
 export default function Navbar() {
   const {theme, setTheme} = useGlobalContext();
 
-  const router = useRouter()
-  const [selected, setSelected] = useState(null)
-  useEffect(() => {
-    if (typeof window === 'undefined' || typeof document === 'undefined') return
-
-    const path = router.asPath
-    const aList = document.getElementsByClassName('link')
-    var preSelected
-    Array.prototype.forEach.call(aList, (a, i) => {
-      // check if url is the same as the id of element
-      if (path.includes(a.getAttribute('href'))) {
-        preSelected = a.getAttribute('href')
-        if (path !== '/' && i === 0) {
-          preSelected = null
-        }
-      }
-      // eventListener to change the color of the selected element
-      a.addEventListener('click', () => {
-        setSelected(a.getAttribute('href'))
-      })
-      // add or remove classes to the selected element
-      if (a.getAttribute('href') === preSelected) {
-        a.classList.add('text-onAccent', 'border-b-onAccent', 'border-b-[1px]')
-      } else {
-        a.classList.remove('text-onAccent', 'border-b-onAccent', 'border-b-[1px]')
-      }
-    })
-    setSelected(preSelected)
-  }, [
-    typeof window !== 'undefined' && typeof document !== 'undefined'
-      ? router.asPath
-      : null,
-  ])
-
   return (
     <nav className="layout-p raleway fixed top-0 left-0 right-0 flex justify-between items-center bg-transparent z-50 py-5 capitalize text-accent">
       <div>

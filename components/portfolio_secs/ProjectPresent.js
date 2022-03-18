@@ -13,7 +13,7 @@ export default function ProjectPresent({ project, index }) {
     return (
       <ScrollPage page={index + 2}>
         <Animator
-          animation={batch(MoveIn(index % 2 === 0 ? -1000 : 1000, 0), FadeIn())}
+          animation={batch(MoveIn(index % 2 === 0 ? -1000 : 1000, -200), FadeIn())}
         >
           <section className="flex flex-col h-screen items-center justify-center">
           {index === 0 && (

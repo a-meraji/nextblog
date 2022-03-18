@@ -1,26 +1,20 @@
-import Link from "next/link"
+import { useState } from 'react'
+import FootNavUl from './FootNavUl'
 export default function FootNav() {
+  const [selected, setSelected] = useState(null)
   return (
     <>
-      <div className="fixed px-5 text-onAccentTr flex justify-between items-center bottom-0 left-[10vw] h-[6vh] max-h-[50px] w-[80vw] rounded-t-full bg-accent md:hidden">
-          <ul className="flex justify-between w-full capitalize">
-          <li>
-            <Link href="#about">
-              <a className="link">about</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="#my-works">
-              <a className="link">my works</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="#message">
-              <a className="link">message</a>
-            </Link>
-          </li>
-              </ul>
-          </div>
+      <div
+        className=" foot-glass rounded-t-full fixed bottom-0 left-[5vw] flex h-[6vh] px-5 max-h-[50px] w-[90vw] items-center justify-between text-onAccentTr md:hidden"
+      >
+          <FootNavUl />
+        <style jsx>{`
+          l {
+            box-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 9px #0ff,
+              0 0 30px #00ffff99;
+          }
+        `}</style>
+      </div>
     </>
   )
 }

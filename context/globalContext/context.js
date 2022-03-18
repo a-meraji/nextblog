@@ -19,7 +19,7 @@ const getInitialTheme = () => {
     }
   }
 
-  return "light"; // if none of above then light theme as the default;
+  return "dark"; // if none of above then dark theme as the default;
 };
 
 

@@ -11,21 +11,20 @@ import {
   batch,
   Fade,
   FadeIn,
-  MoveOut,
-  Sticky,
   StickyIn,
-  StickyOut,
+  MoveIn,
+  Sticky,
   ZoomIn,
 } from 'react-scroll-motion'
 
 export default function Home() {
   if (typeof window !== 'undefined') {
     return (
-      <main className="font-pop transition-colors duration-700  bg-primary text-primary">
+      <main className="font-pop bg-primary text-primary  transition-colors duration-700">
         <div id="about"></div>
-        <ScrollContainer id="scrollContainer" style={{zIndex:-100}}>
+        <ScrollContainer id="scrollContainer" style={{ zIndex: -100 }}>
           <ScrollPage page={0}>
-            <Animator animation={batch(Fade(), Sticky())}>
+            <Animator animation={batch(Fade(), StickyIn())}>
               <article className="layout-p relative w-screen">
                 <FirstIntro />
               </article>
@@ -33,7 +32,7 @@ export default function Home() {
           </ScrollPage>
 
           <ScrollPage page={1}>
-            <Animator animation={batch(FadeIn() ,ZoomIn())}>
+            <Animator animation={batch(FadeIn(), ZoomIn())}>
               <article id="skills">
                 <SecondIntro />
               </article>
@@ -59,25 +58,25 @@ export default function Home() {
   }
 
   return (
-    <main className="font-pop  bg-primary text-primary">
-      {/* <div className="h-screen w-full bg-green-600"></div> */}
-      <>
-        <article id="about">
-          <FirstIntro />
-        </article>
-        <article id="skills">
-          <SecondIntro />
-        </article>
-        <article id="my-works">
-          {projects.map((project, index) => (
-            <ProjectPresent
-              key={`${project.title}${index}`}
-              project={project}
-            />
-          ))}
-        </article>
-        <Message />
-      </>
+    <main className="font-pop bg-primary text-primary  transition-colors duration-700">
+      <h1>
+        This is Poprtpholio of Amin Meraji A programmer. A front-end-developer
+        expert in React.js and Next.js
+      </h1>
+      <article id="about">
+        <h1>I am a font-end developer based in Mashad, Iran</h1>
+        <h3>My name Is Amin Meraji</h3>
+        <p>develop E-commerce web application</p>
+        <p>develop react application</p>
+        <p>develop next.js application</p>
+      </article>
+      <article id="skills">
+        <h1>My Skills in programming as a font-end developer</h1>
+        <p>
+          React.js, Next.js ,jquery, CSS, HTML, JavaScript, NodeJS, Express,
+          MongoDB, Mongoose, NMP, WebPack
+        </p>
+      </article>
       )
     </main>
   )
