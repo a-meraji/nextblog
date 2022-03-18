@@ -10,6 +10,7 @@ export default function Message() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm()
 
@@ -26,6 +27,7 @@ export default function Message() {
     const res = await req.json()
     if (res.message === 'Message sent') {
       setIsSent(200)
+      reset()
     } else {
       setIsSent(500)
     }
@@ -37,7 +39,7 @@ export default function Message() {
   }
 
   return (
-    <section className="flex flex-col mt-8 h-screen items-center justify-center">
+    <section className="mt-8 flex h-screen flex-col items-center justify-center">
       <h1 className="mb-8  text-center text-4xl">Wanna talk?</h1>
       <form
         onSubmit={handleSubmit(onSubmit)}
@@ -75,9 +77,11 @@ export default function Message() {
           type="submit"
           className={`group relative flex items-center justify-between gap-x-1 rounded-full bg-accent py-2 text-onAccent transition-all ${
             isSent === 0
-              ? 'px-4'
+              ? isClicked
+                ? 'bg-orange-500 px-4 text-white'
+                : 'px-4'
               : isSent === 200
-              ? 'px-10'
+              ? 'bg-green-600 px-10 text-white'
               : 'bg-red-600 px-16 text-white'
           } focus:outline-none`}
         >

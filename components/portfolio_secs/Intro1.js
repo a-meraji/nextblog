@@ -21,8 +21,8 @@ export default function FirstIntro() {
             <Image
               src="/me.jpg"
               alt="amin meraji"
-              width={90}
-              height={90}
+              width={80}
+              height={80}
               objectFit="cover"
               className="rounded-full"
             />
