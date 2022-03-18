@@ -1,12 +1,12 @@
 import HTMLTag from '../svgs/HtmlTag'
 
-export default function SecondIntro() {
+export default function Skills() {
   return (
     <section className="flex mx-[8vw] h-screen items-center justify-center text-center">
       <div>
         <div>
           <p className="text-2xl lg:text-3xl">
-            Currently I’m concentrated on <b>React.js</b> and <b>Next.js</b>
+            Currently I’m focused on <b>React.js</b> and <b>Next.js</b>
           </p>
           <div className="mt-10 flex items-center justify-center">
             <HTMLTag />

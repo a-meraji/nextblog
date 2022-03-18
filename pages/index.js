@@ -1,6 +1,6 @@
 import React from 'react'
 import FirstIntro from '../components/portfolio_secs/Intro1'
-import SecondIntro from '../components/portfolio_secs/intro2'
+import Skills from '../components/portfolio_secs/Skills'
 import Message from '../components/portfolio_secs/Message'
 import ProjectPresent from '../components/portfolio_secs/ProjectPresent'
 import { projects } from '../utils/assets'
@@ -34,7 +34,7 @@ export default function Home() {
           <ScrollPage page={1}>
             <Animator animation={batch(FadeIn(), ZoomIn())}>
               <article id="skills">
-                <SecondIntro />
+                <Skills />
               </article>
             </Animator>
           </ScrollPage>
