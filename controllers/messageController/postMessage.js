@@ -4,13 +4,14 @@ import nodemailer from 'nodemailer';
 export default function postMessage(req, res) {
   try {
     const { userName, userEmail, userMessage } = req.body
+    console.log( userName, userEmail, userMessage)
     if (!userName || !userEmail || !userMessage) {
       return errorController(422, 'Missing fields', res)
     }
 
   const transporter = nodemailer.createTransport({
     port: 465,
-    host: "aminblog.vercel.app",
+    host: "smtp.gmail.com",
     auth: {
       user: process.env.EMAIL,
       pass:  process.env.EMAIL_PASSWORD,
