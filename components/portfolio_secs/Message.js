@@ -40,7 +40,7 @@ export default function Message() {
 
   return (
     <section className="mt-8 flex h-screen flex-col items-center justify-center">
-      <h1 className="mb-8  text-center text-4xl">Wanna talk?</h1>
+      <h1 className="mb-8  text-center text-4xl">Let's talk</h1>
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="mx-auto w-full max-w-xl px-4"
