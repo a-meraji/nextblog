@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { useGlobalContext } from '../../context/globalContext/context'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 import Logo from '../svgs/logo'
 import  {BsFillSunFill,BsFillMoonFill} from 'react-icons/bs'
 
