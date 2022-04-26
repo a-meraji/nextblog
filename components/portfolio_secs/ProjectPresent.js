@@ -14,7 +14,7 @@ export default function ProjectPresent({ project, index }) {
     return (
       <ScrollPage page={index + 2}>
         <Animator
-          animation={batch(MoveIn(index % 2 === 0 ? -1000 : 1000, -200), FadeIn())}
+          animation={batch(MoveIn(index % 2 === 0 ? -1000 : 1000, 0), FadeIn())}
           >
           <section className="flex flex-col h-screen items-center justify-center">
           {index === 0 && (
@@ -22,8 +22,8 @@ export default function ProjectPresent({ project, index }) {
               Some of my latest works
             </h1>
           )}
-            <div className="mx-auto w-[70vw] max-w-xl">
-              <a href={url} target="_blank" rel="noopener">
+            <div className="mx-auto w-[70vw] max-w-lg">
+              <a href={url} target="_blank">
                 <img
                   src={image}
                   alt={`Preview Screenshot of ${title}`}
@@ -31,10 +31,10 @@ export default function ProjectPresent({ project, index }) {
                 />
               </a>
               <div className="mt-4 mb-2 flex justify-center gap-x-4 text-accent">
-                <a href={github} target="_blank" rel="noopener">
+                <a href={github} target="_blank">
                   <FaGithub />
                 </a>
-                <a href={url} target="_blank" rel="noopener">
+                <a href={url} target="_blank">
                   <FaExternalLinkAlt />
                 </a>
               </div>

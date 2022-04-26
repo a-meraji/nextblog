@@ -10,6 +10,7 @@ module.exports = {
         accent: 'var(--color-accent)',
         accentHover: 'var(--color-accent-hover)',
         transAccent: 'var(--color-trans-accent)',
+        nav: 'var(--color-nav)',
       },
       textColor: {
         primary: 'var(--color-text-primary)',

@@ -8,7 +8,7 @@ export default function Navbar() {
   const {theme, setTheme} = useGlobalContext();
 
   return (
-    <nav className="layout-p raleway fixed top-0 left-0 right-0 flex justify-between items-center bg-transparent z-50 py-5 capitalize text-accent">
+    <nav className="layout-p raleway fixed top-0 left-0 right-0 flex justify-between items-center bg-nav z-50 py-5 capitalize text-accent">
       <div>
         <Link href="/">
           <a className="link"><Logo/></a>

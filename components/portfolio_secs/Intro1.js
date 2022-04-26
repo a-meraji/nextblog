@@ -1,4 +1,5 @@
 import { BiCopy, BiCheck } from 'react-icons/bi'
+import {VscFilePdf} from "react-icons/vsc"
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Gears from './Gears'
@@ -37,8 +38,8 @@ export default function FirstIntro() {
             }}
             classame="w-full"
           >
-            <h6 className="text-sm -mr-5 text-secondary">I'm Amin Meraji</h6>
-            <p className="text-xs -mr-5 text-secondary">available for work</p>
+            <h6 className="-mr-5 text-sm text-secondary">I'm Amin Meraji</h6>
+            <p className="-mr-5 text-xs text-secondary">available for work</p>
           </motion.div>
         </div>
         <motion.div
@@ -52,30 +53,58 @@ export default function FirstIntro() {
         >
           <p className="my-8 -mr-10 text-4xl font-bold md:text-6xl">
             I’m a front-end developer.
-            <br />I love to give life to ideas.
+            <br />I artistically engineer ideas.
           </p>
+
           <button
             onClick={() => {
               navigator.clipboard.writeText('merajiamin1997@gmail.com')
               setIsClicked(true)
-              setTimeout(()=>{
+              setTimeout(() => {
                 setIsClicked(false)
-              },1500)
+              }, 1500)
             }}
             className="group relative flex items-center justify-between gap-x-1 rounded-full bg-accent py-2 px-4 text-onAccent focus:outline-none"
           >
-            <span className={`transition-all ${isClicked&&"-translate-x-[200%] opacity-0"} group-hover:-translate-x-[200%] group-hover:opacity-0`}>
+            <span
+              className={`transition-all ${
+                isClicked && '-translate-x-[200%] opacity-0'
+              } group-hover:-translate-x-[200%] group-hover:opacity-0`}
+            >
               copy my e-mail
             </span>
 
-              <span className={`transition-all flex justify-center items-center duration-300  absolute my-auto right-0 left-0  ${isClicked?"opacity-100":"opacity-0"}`}>
-                <span>copied</span>
-                <BiCheck />
-                </span> 
+            <span
+              className={`absolute right-0 left-0 my-auto flex  items-center justify-center transition-all duration-300  ${
+                isClicked ? 'opacity-100' : 'opacity-0'
+              }`}
+            >
+              <span>copied</span>
+              <BiCheck />
+            </span>
 
-              <BiCopy className={`transition-all duration-300  group-hover:-translate-x-[350%] group-hover:scale-150 ${isClicked?"opacity-0":"opacity-100"}`} />
-
+            <BiCopy
+              className={`transition-all duration-300  group-hover:-translate-x-[350%] group-hover:scale-150 ${
+                isClicked ? 'opacity-0' : 'opacity-100'
+              }`}
+            />
           </button>
+
+          <a
+            download="amin_meraji_cv.pdf"
+            href="/amin_meraji_cv.pdf"
+            className="w-fit mt-5 group relative flex items-center justify-between gap-x-2 rounded-full bg-accent py-2 px-4 text-onAccent focus:outline-none"
+          >
+            <span
+              className={`transition-all group-hover:-translate-x-[200%] group-hover:opacity-0`}
+            >
+              download resume
+            </span>
+            <VscFilePdf
+            className={`transition-all duration-300 scale-150  group-hover:-translate-x-[400%] group-hover:scale-[200%]`}
+            />
+          </a>
+
         </motion.div>
       </div>
       <Gears />
