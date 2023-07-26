@@ -8,7 +8,11 @@ import {
 } from 'react-icons/fa'
 
 export const socials = [
-  { name: 'linkedin', url: 'https://www.linkedin.com/in/m-amin-meraji/', icon: FaLinkedin },
+  {
+    name: 'linkedin',
+    url: 'https://www.linkedin.com/in/m-amin-meraji/',
+    icon: FaLinkedin,
+  },
   { name: 'github', url: 'https://github.com/a-meraji', icon: FaGithub },
   { name: 'telegram', url: 'https://t.me/amin_mrj', icon: FaTelegram },
   { name: 'twitter', url: 'https://twitter.com/mamad_coder', icon: FaTwitter },
@@ -17,8 +21,19 @@ export const socials = [
 
 export const projects = [
   {
+    title: 'Betatik',
+    description: 'an AI-powerd career coach platform',
+    url: 'https://app.betatik.com?red=false',
+    github: '#',
+    image: '/projects/betatik.png',
+    features: [
+      'Developed and maintained an AI-powerd Platform, providing career solution base on data',
+    ],
+  },
+  {
     title: 'nextommerce',
-    description: 'an ecommerce web-app built with Nextjs + TailwindCSS + mongoDB',
+    description:
+      'an ecommerce web-app built with Nextjs + TailwindCSS + mongoDB',
     url: 'https://nextommerce.vercel.app/',
     github: 'https://github.com/a-meraji/nextommerce',
     image: '/projects/nextommerce.png',
@@ -34,7 +49,8 @@ export const projects = [
   },
   {
     title: 'Quiz App',
-    description: 'A Nextjs Quiz Web-App built with Redux-Saga + Redux toolkit + react-redux.',
+    description:
+      'A Nextjs Quiz Web-App built with Redux-Saga + Redux toolkit + react-redux.',
     url: 'https://quiz-redux.vercel.app/',
     github: 'https://github.com/a-meraji/quiz',
     image: '/projects/quiz.png',
