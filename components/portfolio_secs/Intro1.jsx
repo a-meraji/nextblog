@@ -26,8 +26,8 @@ export default function FirstIntro() {
               <Image
                 src="/me.jpg"
                 alt="amin meraji"
-                width={80}
-                height={80}
+                width={100}
+                height={100}
                 objectFit="cover"
                 className="rounded-full"
               />
@@ -56,7 +56,7 @@ export default function FirstIntro() {
             }}
           >
             <p className="my-8 -mr-10 text-4xl font-bold md:text-6xl">
-              I’m a front-end developer.
+              I’m a web developer.<span className='text-sm'>(MERN stack)</span>
               <br />I artistically engineer ideas.
             </p>
 
