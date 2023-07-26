@@ -11,16 +11,9 @@ const getInitialTheme = () => {
       return storedPrefs;
     }
 
-    // check for "prefers-color-scheme" on browser preferences and return
-    //  if it matches with dark
-    const userMedia = window.matchMedia("(prefers-color-scheme: dark)");
-    if (userMedia.matches) {
-      return "dark";
-    }
-  }
-
-  return "light"; // if none of above then light theme as the default;
+  return "dark"; // if none of above then dark theme as the default;
 };
+}
 
 
 /* ********  CONTEXT ************ */
@@ -31,6 +24,7 @@ const ContextProvider = ({ initialTheme, children }) => {
   const [theme, setTheme] = React.useState(getInitialTheme);
   // Set root classlist (.light or .dark) and "color-theme" on local storage
   const ToggleTheme = (rawTheme) => {
+    if(typeof window === "undefined")return
     const root = window.document.documentElement;
     const isDark = rawTheme === "dark";
 
@@ -40,9 +34,6 @@ const ContextProvider = ({ initialTheme, children }) => {
     localStorage.setItem("color-theme", rawTheme);
   };
 
-  if (initialTheme) {
-    ToggleTheme(initialTheme);
-  }
   // Whenever theme changed then set root classList and localStorage again.
   useEffect(() => {
     ToggleTheme(theme);
