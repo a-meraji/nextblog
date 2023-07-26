@@ -12,8 +12,6 @@ import {
   Fade,
   FadeIn,
   StickyIn,
-  MoveIn,
-  Sticky,
   ZoomIn,
 } from 'react-scroll-motion'
 
@@ -59,25 +57,28 @@ export default function Home() {
 
   return (
     <main className="font-pop bg-primary text-primary  transition-colors duration-700">
-      <h1>
-        This is Poprtpholio of Amin Meraji A programmer. A front-end-developer
-        expert in React.js and Next.js
-      </h1>
-      <article id="about">
-        <h1>I am a font-end developer based in Mashad, Iran</h1>
-        <h3>My name Is Amin Meraji</h3>
-        <p>develop E-commerce web application</p>
-        <p>develop react application</p>
-        <p>develop next.js application</p>
-      </article>
-      <article id="skills">
-        <h1>My Skills in programming as a font-end developer</h1>
-        <p>
-          React.js, Next.js ,jquery, CSS, HTML, JavaScript, NodeJS, Express,
-          MongoDB, Mongoose, NMP, WebPack
-        </p>
-      </article>
-      )
-    </main>
+        <div id="about"></div>
+              <article className="layout-p relative w-screen">
+                <FirstIntro />
+              </article>
+
+              <article id="skills">
+                <Skills />
+              </article>
+
+          <article id="my-works" className="layout-p">
+            {projects.map((project, index) => (
+              <ProjectPresent
+                key={`${project.title}${index}`}
+                project={project}
+                index={index}
+              />
+            ))}
+          </article>
+
+          <div id="message" className="layout-p pb-[50vh]">
+            <Message />
+          </div>
+      </main>
   )
 }
