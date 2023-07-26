@@ -24,7 +24,7 @@ export default function FirstIntro() {
               }}
             >
               <Image
-                src="/me.jpg"
+                src="/IMG_20221227_222129_368.jpg"
                 alt="amin meraji"
                 width={100}
                 height={100}
