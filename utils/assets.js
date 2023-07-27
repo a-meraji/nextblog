@@ -1,11 +1,13 @@
 import {
   FaLinkedin,
   FaTelegram,
+  FaPhone,
   FaWhatsapp,
   FaInstagram,
   FaTwitter,
   FaGithub,
 } from 'react-icons/fa'
+import {HiPhone} from "react-icons/hi"
 
 export const socials = [
   {
@@ -15,7 +17,9 @@ export const socials = [
   },
   { name: 'github', url: 'https://github.com/a-meraji', icon: FaGithub },
   { name: 'telegram', url: 'https://t.me/amin_mrj', icon: FaTelegram },
-  { name: 'twitter', url: 'https://twitter.com/mamad_coder', icon: FaTwitter },
+  { name: 'tel', url: 'https://wa.me/+989033018426', icon: FaWhatsapp },
+
+  // { name: 'twitter', url: 'https://twitter.com/mamad_coder', icon: FaTwitter },
   // { name: 'instagram', url: '/', icon: FaInstagram },
 ]
 
